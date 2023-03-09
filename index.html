@@ -1,0 +1,88 @@
+<html>
+    <!-- invisible smarts -->
+    <head>
+        <!-- where all my styles go -->
+        <style>
+            /* target an id called terry */
+           #terry {
+            color: red;
+           } 
+           #mabel {
+            color: blue;
+           } 
+
+           /* target based on class row */
+           .row {
+            background-color: orange;
+           }
+
+           h1 {
+            color: purple;
+           }
+        </style>
+    </head>
+
+    <!-- visible stuff -->
+    <body>
+        <!-- adding js -->
+        <script>
+            var searchTerm = "Cookie"
+
+            //how do i search through a list of pets
+            
+            var pet1 ="Mabel"
+            var pet2 = "Terry"
+            
+            // when the pet name matches (name is equal to) then give me that pet
+            if (pet1 === searchTerm)
+            {
+                console.log(`Pet 1 ${pet1} matches search term ${searchTerm}`)
+            }
+            else if (pet2 === searchTerm)
+            {
+                console.log(`Pet 2 ${pet2} matches search term ${searchTerm}`)
+            }
+            //nothing matched, so for any other case
+            else {
+                console.log("No pets match, please consider some of our other amazing pets")
+            }
+            //to search compare my search term against each pet in the list
+            
+            //use let its better than var means about the same...
+            //square brackets are arrays
+            let pets = ["Mabel", "Terry", "Gumby", "Doggo", "Pizza", "Cookie"];
+            console.log(pets)
+
+            //i can grow that list with .push() a function on all arrays
+            pets.push("Rover")
+            console.log(pets)
+
+            //get the size / length of list with .length a member/property on all arrays
+            console.log("I have "+ pets.length + " pets available to adopt")
+        </script>
+        <h1>Adopt a pet</h1>
+        <!-- search bar -->
+        <!-- <div id="search-bar">
+            <input type="text"/>
+            <button>Search</button>
+        </div> -->
+        
+        <!-- row 1 -->
+        <div id="row-1" class="row">
+            <img src="" alt="puppy-1"/>
+            <h2 id="terry">Terry</h2>
+            <img src="" alt="puppy-2"/>
+            <h2 id="mabel">Mabel</h2>
+            <img src="" alt="puppy-3"/>
+            <h2 id="doggo">doggo</h2>
+        </div>
+        <div id="row-2" class="row">
+            <img src="" alt="puppy-1"/>
+            <h2 id="gumby">Gumby</h2>
+            <img src="" alt="puppy-2"/>
+            <h2 id="cookie">Cookie</h2>
+            <img src="" alt="puppy-3"/>
+            <h2 id="pizza">Pizza</h2>
+        </div>
+    </body>
+</html>
