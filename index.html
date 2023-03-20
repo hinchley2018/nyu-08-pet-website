@@ -33,25 +33,19 @@
             var pet1 ="Mabel"
             var pet2 = "Terry"
             
-            // when the pet name matches (name is equal to) then give me that pet
-            if (pet1 === searchTerm)
-            {
-                console.log(`Pet 1 ${pet1} matches search term ${searchTerm}`)
-            }
-            else if (pet2 === searchTerm)
-            {
-                console.log(`Pet 2 ${pet2} matches search term ${searchTerm}`)
-            }
-            //nothing matched, so for any other case
-            else {
-                console.log("No pets match, please consider some of our other amazing pets")
-            }
-            //to search compare my search term against each pet in the list
-            
             //use let its better than var means about the same...
             //square brackets are arrays
             let pets = ["Mabel", "Terry", "Gumby", "Doggo", "Pizza", "Cookie"];
             console.log(pets)
+            for(let index = 0; index < pets.length; index++){
+                //to search compare my search term against each pet in the list
+                // when the pet name matches (name is equal to) then give me that pet
+                if (pets[index] === searchTerm)
+                {
+                    console.log(`Pet ${pets[index]} matches search term ${searchTerm}`)
+                }
+            }
+            
 
             //i can grow that list with .push() a function on all arrays
             pets.push("Rover")
