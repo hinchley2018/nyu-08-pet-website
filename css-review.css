@@ -1,0 +1,27 @@
+.section {
+    background-color: lightblue;
+    
+}
+body {
+    cursor: progress;
+}
+/* target all images */
+img {
+    /* give them a height and width of 200px */
+    width: 200px;
+    height: 200px;
+}
+/* look at scree and use the minimuim width starting at 900px and anything bigger */ 
+@media screen and (min-width: 900px) {
+    .section {
+      background-color: lightgreen;
+    }
+    body{
+        background-color: orange;
+    }
+    img {
+        /* give them a height and width of 200px */
+        width: 400px;
+        height: 400px;
+    }
+}
