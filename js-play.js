@@ -49,13 +49,40 @@ adoptRover.textContent = "Adopt me"
 //add to screen
 petsContainer.append(adoptRover)
 
-function adoptThisPet(){
+//wire up a listener for clicks, run the function when a user clicks
+adoptRover.addEventListener('click', function(event){
+    adoptThisPet(event)
+})
 
+
+function adoptThisPet(event){
+    console.log("adopted")
+    console.log(event.target)
+    let parent = document.querySelector("#"+event.target.id+"-parent")
+    
+    parent.remove()
 }
 function addToCart(){
 
 }
 
 function removeFromCart(){
-    
+
 }
+
+let magicImg = document.createElement("img")
+magicImg.setAttribute("src", "http://placekitten.com/200/200")
+let x= document.createElement("h1")
+x.textContent = "Magic"
+petsContainer.append(x)
+petsContainer.append(magicImg)
+
+magicImg.addEventListener('click', function(event){
+    adoptThisPet(event)
+})
+
+
+let headerAwesome = document.querySelector("h2")
+headerAwesome.addEventListener("click", function(event){
+    event.target.style.color = "green"
+})
